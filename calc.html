@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            background-color: #e3d9df;
+            height: 100vh;
+            width: 50vw;
+            margin: auto;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            background: #bbcacc;
+            border-radius: 40px;
+        }
+        input {
+            width: 50px;
+            height: 25px;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>первое число: <input type="number" id="num1"></p>
+    <p>второе число: <input type="number" id="num2"></p>
+
+    <button onclick="sum();">
+        +
+    </button>
+    <button onclick="diff();">
+        -
+    </button>
+    <button onclick="division();">
+        /
+    </button>
+    <button onclick="multiplication();">
+        *
+    </button>
+    <p>результат: <div class="result"> </div></p>
+
+<script>
+let a = document.getElementById('num1');
+let b = document.getElementById('num2');
+let c
+let res = document.querySelector('.result');
+function sum()
+{
+    c = +a.value + +b.value;
+    res.innerHTML = c;  
+}
+
+function diff()
+{
+    c = +a.value - +b.value;
+    res.innerHTML = c;  
+}
+
+function multiplication()
+{
+    c = +a.value * +b.value;
+    res.innerHTML = c;
+}
+    
+function division()
+{
+    c = +a.value / +b.value;
+    res.innerHTML = c;
+}
+</script>
+
+</body>
+</html>

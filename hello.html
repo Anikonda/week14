@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi</title>
+    <style>
+        body {
+            background-color: #e3d9df;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+			margin: 20px;
+            width: 50px;
+            height: 25px;
+            background: #bbcacc;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div>Как тебя зовут? <input type="text" id="myname"></div>
+<div> <button onclick="hello();">ок</button></div> 
+<div class="hi"></div>
+<script>
+let div = document.querySelector('.hi');
+function hello() {
+    let name = document.getElementById('myname');
+    div.innerHTML = 'Привет, ' + name.value;
+    name.value = '';
+}  
+</script>
+
+</body>
+</html>
